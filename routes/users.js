@@ -13,6 +13,33 @@ const Pokemon = models.Pokemon;
         { error: true, message: "Nome de usuário ou senha incorretos."} (se credenciais estiverem erradas)
 */
 
+/*
+  ROTAS
+
+  Criar novo usuário
+  Endpoint: POST /users
+  Corpo da requisição:
+  { name, password }
+
+  Listar usuários
+  Endpoint: GET /users
+
+  Obter um usuário
+  Endpoint: GET /users/:name
+  - :name é o nome do usuário
+  Exemplo: [base_url]/users/antonio
+
+  Atualizar
+  Endpoint: PUT /users
+  Corpo da requisição:
+  { name, password }
+
+  Remover
+  Endpoint: DELETE /users/:name
+  - :name é o nome do usuário
+  Exemplo: [base_url]/users/antonio
+*/
+
 // Remover usuário
 app.delete('/users/:name', function(req, res) {
   User.destroy({
