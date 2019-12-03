@@ -19,8 +19,8 @@ app.use(function(req, res, next) {
 
 app.use(users);
 
-var port = 3000;
-app.set('port', port);
+const PORT = process.env.PORT || 3000;
+app.set('port', PORT);
   /**
    * Create HTTP server.
    */
